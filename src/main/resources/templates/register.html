@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>注册</title>
+    <link rel="stylesheet" type="text/css" href="/css/common.css" />
+</head>
+<body>
+<form th:action="@{/register}" method="post">
+    <div>
+        <!--/*@thymesVar id="error" type=""*/-->
+        <span id="basic-addon0">&nbsp;</span>
+        <span style="font-size: 12px;color: red" th:text="${error}" aria-describedby="basic-addon0"></span>
+        <br />
+    </div>
+    <div>
+        <span id="basic-addon1">用户名</span>
+        <input id="user_name" name="userName" type="text" placeholder="用户名" aria-describedby="basic-addon1" />
+
+    </div>
+    <br />
+    <div>
+        <span id="basic-addon2">密码</span>
+        <input id="password" name="password" type="password" placeholder="密码" aria-describedby="basic-addon2" />
+    </div>
+    <br />
+    <button type="submit" style="width:190px;">注册</button>
+
+</form>
+</body>
+</html>
